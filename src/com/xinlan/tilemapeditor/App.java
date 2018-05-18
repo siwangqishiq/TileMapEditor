@@ -31,7 +31,7 @@ public class App {
 
         mMainFrame.setLayout(new BorderLayout());
 
-        mMainFrame.setLocation(100,0);
+        mMainFrame.setLocation(100,0);//
 
         mMenu = new Menu(this);
         mCubePanel = new CubePanel(this);
