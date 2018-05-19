@@ -1,10 +1,10 @@
-package com.xinlan.tilemapeditor;
+package com.xinlan.tilemapeditor.ui;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class CubePanel {
-    public static final int WIDTH = 200;
+    public static final int WIDTH = App.SCREEN_WIDTH / 4;
 
     private App mApp;
 
@@ -20,9 +20,9 @@ public class CubePanel {
     private void initView(){
         mCubeContainer = new JPanel();
         //mCubeContainer.setBackground(Color.BLACK);
+        //mCubeContainer.setBackground(Color.BLACK);
         mCubeContainer.setSize(WIDTH , App.SCREEN_HEIGHT);
 
-        mApp.mMainFrame.setLayout(null);
         mApp.mMainFrame.getContentPane().add(mCubeContainer);
 
         mCubeContainer.setLayout(null);

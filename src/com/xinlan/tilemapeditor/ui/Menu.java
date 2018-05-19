@@ -1,6 +1,8 @@
-package com.xinlan.tilemapeditor;
+package com.xinlan.tilemapeditor.ui;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Menu {
 
@@ -49,5 +51,22 @@ public class Menu {
         mAboutItem = new JMenuItem("关于此软件");
         mAboutMenu.add(mAboutItem);
         mMenuBar.add(mAboutMenu);
+
+        createNewMap();
+    }
+
+    private void createNewMap(){
+        this.mNewFile.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                doCreateNewMap();
+            }
+        });
+    }
+
+    private void doCreateNewMap(){
+        //显示一个对话框
+        CreateNewMapDialog newMapDialog = new CreateNewMapDialog(mContext);
+        newMapDialog.setVisible(true);
     }
 }//end class
